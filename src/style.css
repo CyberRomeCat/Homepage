@@ -2,6 +2,28 @@
   margin: 0;
 }
 
+@keyframes drop-in {
+  from {
+    transform: rotate(30deg) translate(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
 body {
   display: grid;
   grid-template-rows: 100vh 100vh 30%;
@@ -9,6 +31,8 @@ body {
 
 .title {
   font-size: 10vw;
+  transition: ease-in-out 250ms;
+  animation: drop-in 1000ms;
 }
 
 header {
@@ -31,6 +55,7 @@ header {
   max-width: 65vw;
   padding-bottom: 4rem;
   color: #1b5c6a;
+  animation: drop-in 1100ms;
 }
 
 #occupation {
@@ -57,6 +82,7 @@ button {
     rgba(29, 202, 255, 0.2) -15px 15px,
     rgba(29, 202, 255, 0.1) -20px 20px,
     rgba(29, 202, 255, 0.05) -25px 25px;
+  animation: slide 1000ms;
 }
 
 button:hover {
