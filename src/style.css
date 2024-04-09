@@ -1,5 +1,17 @@
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 @keyframes drop-in {
@@ -24,15 +36,25 @@
   }
 }
 
-body {
-  display: grid;
-  grid-template-rows: 100vh 100vh 30%;
+header {
+  height: 100vh;
+}
+
+header,
+.footer {
+  background: #e7f0f2;
+}
+
+footer {
+  margin-top: 2.5rem;
+  height: 50vh;
 }
 
 .title {
   font-size: 10vw;
   transition: ease-in-out 250ms;
   animation: drop-in 1000ms;
+  transition: ease-out;
 }
 
 header {
@@ -41,7 +63,7 @@ header {
   align-items: center;
 }
 
-.header-content {
+#header-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,6 +85,7 @@ header {
 }
 
 button {
+  transition: ease-out;
   display: grid;
   grid-template-columns: 90% 10%;
   color: #1b5c6a;
@@ -95,31 +118,66 @@ button:hover {
   width: 3rem;
 }
 
-@media (max-width: 425px) {
-  .header {
-    justify-content: center;
-  }
-  .header-content {
-    justify-content: center;
-    align-items: center;
-    width: 80vw;
-  }
-  .title {
-    font-size: 5rem;
-  }
-  .description {
-    padding-top: 1rem;
-    padding-right: 2.8rem;
-    font-size: 2rem;
-    justify-self: start;
-  }
+#main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2.5rem 0 2.5rem;
+  min-height: 100vh;
+  flex: 1 0;
+}
 
-  button {
-    letter-spacing: 0;
-    font-size: 1.3rem;
-    align-items: center;
-    letter-spacing: 0.5px;
-  }
+.all-projects {
+  min-height: 100%;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  padding-top: 1.5rem;
+}
+
+#title-content {
+  font-size: 4rem;
+  font-family: "Inria Serif", serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1vw;
+  height: 45vh;
+  justify-content: space-evenly;
+  background-color: antiquewhite;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  min-width: 100px;
+}
+
+.project-title {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.project-description {
+  text-align: left;
+  font-family: "Inria Serif", serif;
+}
+
+.project-pic {
+  object-fit: cover;
+  height: 15rem;
+}
+
+.title-icon-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0.3em 0 0.3em 0;
+  align-self: baseline;
+}
+
+.github-icon {
+  height: 2em;
+  width: 2em;
 }
 
 @media (max-width: 1028px) {
@@ -140,7 +198,41 @@ button:hover {
   }
 }
 
-header,
-footer {
-  background: #e7f0f2;
+@media (max-width: 961px) {
+  .all-projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 795px) {
+  .all-projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    justify-content: center;
+  }
+  #header-content {
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+  }
+  .title {
+    font-size: 5rem;
+  }
+  .description {
+    padding-top: 1rem;
+    padding-right: 2.8rem;
+    font-size: 2rem;
+    justify-self: start;
+  }
+
+  button {
+    letter-spacing: 0;
+    font-size: 1.3rem;
+    align-items: center;
+    letter-spacing: 0.5px;
+  }
 }
