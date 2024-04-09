@@ -132,7 +132,7 @@ button:hover {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 15px;
+  grid-gap: 20px;
   padding-top: 1.5rem;
 }
 
@@ -152,6 +152,7 @@ button:hover {
   background-color: antiquewhite;
   padding: 1rem 1.5rem 1rem 1.5rem;
   min-width: 100px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .project-title {
