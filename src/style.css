@@ -136,7 +136,9 @@ button:hover {
   padding-top: 1.5rem;
 }
 
-#title-content {
+#title-content,
+.footer-title {
+  animation: slide 1000ms;
   font-size: 4rem;
   font-family: "Inria Serif", serif;
 }
@@ -175,9 +177,48 @@ button:hover {
   align-self: baseline;
 }
 
-.github-icon {
+.icon {
   height: 2em;
   width: 2em;
+}
+
+.profile-pic {
+  height: 25em;
+}
+
+footer {
+  font-family: "Inria Serif", serif;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-description {
+  font-size: 1.5rem;
+  max-width: 55vw;
+  color: #1b5c6a;
+  animation: drop-in 1100ms;
+  padding-bottom: 1rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.tel,
+.email {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 1028px) {
@@ -201,6 +242,15 @@ button:hover {
 @media (max-width: 961px) {
   .all-projects {
     grid-template-columns: 1fr 1fr;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    flex: 1 0;
+  }
+  .contact-info {
+    padding: 3rem 0 3rem 0;
   }
 }
 
