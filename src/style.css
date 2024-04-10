@@ -283,6 +283,7 @@ footer {
   }
   .title {
     font-size: 5rem;
+    padding-left: 0.2em;
   }
   .description {
     padding-top: 1rem;
