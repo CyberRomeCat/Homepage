@@ -1,8 +1,3 @@
-# project-setup-template
+# Homepage
 
-- [x] html
-- [x] css
-- [x] javascript
-- [x] Webpack
-- [x] ESlint
-- [x] prettier
+personal portfolio
