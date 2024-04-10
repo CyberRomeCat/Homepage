@@ -36,18 +36,36 @@ body {
   }
 }
 
-header {
+.main-header {
+  display: grid;
+  grid-template-rows: 0.9fr 10fr;
   height: 100vh;
 }
 
-header,
-.footer {
-  background: #e7f0f2;
+.header-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
 }
 
-footer {
-  margin-top: 2.5rem;
-  height: 50vh;
+#header-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+  height: 100%;
+}
+
+.contact-me {
+  font-size: 3vw;
+}
+
+#header-icons > a > img {
+  width: 4vw;
+}
+
+.main-header,
+.footer {
+  background: #e7f0f2;
 }
 
 .title {
@@ -55,12 +73,6 @@ footer {
   transition: ease-in-out 250ms;
   animation: drop-in 1000ms;
   transition: ease-out;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #header-content {
@@ -80,7 +92,8 @@ header {
   animation: drop-in 1100ms;
 }
 
-#occupation {
+#occupation,
+.contact-me {
   font-family: "Roboto Mono", monospace;
 }
 
@@ -179,7 +192,6 @@ button:hover {
 }
 
 .icon {
-  height: 2em;
   width: 2em;
 }
 
@@ -192,6 +204,8 @@ footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 2.5rem;
+  height: 50vh;
 }
 
 .contact-info {
@@ -262,9 +276,6 @@ footer {
 }
 
 @media (max-width: 500px) {
-  .header {
-    justify-content: center;
-  }
   #header-content {
     justify-content: center;
     align-items: center;
@@ -285,5 +296,15 @@ footer {
     font-size: 1.3rem;
     align-items: center;
     letter-spacing: 0.5px;
+  }
+  #header-icons {
+    display: none;
+  }
+  .header-header {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    justify-self: flex-end;
+  }
+  .main-header {
+    flex: 1 0;
   }
 }
